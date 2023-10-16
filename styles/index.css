@@ -1,0 +1,153 @@
+.header__container {
+  background: #212529;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px;
+  gap: 16px;
+}
+
+.header__container > h1 {
+  font-size: var(--font-size-2)
+}
+.header__container > div {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+  gap:var(--gap-6);
+}
+
+span {
+  color:var(--color-brand-1);
+}
+h1 {
+  align-self: center;
+}
+
+.header__buttons {
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 2px solid;
+  border-color: #ffffff;
+  background-color: #212529;
+  color: #ffffff;
+}
+body {
+  background: #e9ecef;
+}
+
+.frontend__container {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.frontend__container__ul {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+  margin: 20px;
+  overflow-x: auto;
+}
+
+.cards__li {
+  background: white;
+  border-radius: 8px;
+  height: 220px;
+  min-width: 347px;
+  max-width: 347px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo__container {
+  display: flex;
+  gap: 32px;
+  padding: 5px 10px;
+}
+.logo__company {
+  display: flex;
+  background-color: #121010;
+  color: white;
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+
+  align-items: center;
+
+  justify-content: center;
+}
+.job__title {
+  width: 80%;
+  margin: 3px;
+}
+
+.description {
+  margin: 2px;
+}
+.description__container {
+  position: relative;
+}
+.details__container {
+  display: flex;
+  gap: 16px;
+  padding: 10px;
+}
+
+.details__1 {
+  background: #edeefb;
+  color: #484ffb;
+  cursor: pointer;
+  padding: 5px;
+}
+.details__2 {
+  background: #edeefb;
+  color: #484ffb;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.backend__container {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  margin: 20px;
+}
+.backend__container__ul {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+  margin: 20px;
+  overflow-x: auto;
+}
+
+@media (min-width: 428px) {
+  .header__container > div {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 900px) {
+  .backend__container__ul {
+    flex-wrap: wrap;
+
+    overflow-x: hidden;
+  }
+
+  .frontend__container__ul {
+    flex-wrap: wrap;
+
+    overflow-x: hidden;
+  }
+}

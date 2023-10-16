@@ -1,4 +1,4 @@
-const frontEndJobs = [
+export const frontEndJobs = [
     {
         id:1,
         title: "Desenvolvedor Frontend",
@@ -37,7 +37,7 @@ const frontEndJobs = [
     },
 ]
 
-const backEndJobs = [
+export const backEndJobs = [
     {
         id:1,
         title: "Desenvolvedor Backend",
