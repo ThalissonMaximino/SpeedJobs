@@ -92,60 +92,53 @@ cards(frontEndJobs, frontEnd);
 cards(backEndJobs, backEnd);
 
 
-
-
 function createCards(database) {
-  let id = database.id;
-  let title = database.title;
-  let description = database.descrription;
-  let modality1 = database.modality;
-  let modality2 = database.modality;
+    
+    let li = document.createElement("li");
+    let div = document.createElement("div");
+    let cardLogo = document.createElement("h1");
+    let cardTitle = document.createElement("h2");
+    let div2 = document.createElement("div");
+    let text = document.createElement("p");
+    let div3 = document.createElement("div");
+    let h3 = document.createElement("h3");
+    let h3_2 = document.createElement("h3");
+   
+    li.classList.add("cards__li");
+    div.classList.add("logo__container");
+    cardLogo.classList.add("logo__company");
+    cardTitle.classList.add("job__title");
+    div2.classList.add("description__container");
+    text.classList.add("description");
+    div3.classList.add("details__container");
+    h3.classList.add("details__1");
+    h3_2.classList.add("details__2");
 
-  let li = document.createElement("li");
-  let div = document.createElement("div");
-  let cardLogo = document.createElement("h1");
-  let cardTitle = document.createElement("h2");
-  let div2 = document.createElement("div");
-  let text = document.createElement("p");
-  let div3 = document.createElement("div");
-  let h3 = document.createElement("h3");
-  let h3_2 = document.createElement("h3");
+    li.id = "cards__li";
+    div.id = "logo__container";
+    cardLogo.id = "logo__company";
+    div2.id = "description__container";
+    text.id = "description";
+    div3.id = "details__container";
+    h3.id = "details__1";
+    h3_2.id = "details__2";
 
-  li.classList.add("cards__li");
-  div.classList.add("logo__container");
-  cardLogo.classList.add("logo__company");
-  cardTitle.classList.add("job__title");
-  div2.classList.add("description__container");
-  text.classList.add("description");
-  div3.classList.add("details__container");
-  h3.classList.add("details__1");
-  h3_2.classList.add("details__2");
+    cardLogo.innerText = "G";
+    cardTitle.innerHTML = database.title;
+    text.innerHTML = database.descrription;
+    h3.innerHTML = database.modality[0];
+    h3_2.innerHTML = database.modality[1];
 
-  li.id = "cards__li";
-  div.id = "logo__container";
-  cardLogo.id = "logo__company";
-  div2.id = "description__container";
-  text.id = "description";
-  div3.id = "details__container";
-  h3.id = "details__1";
-  h3_2.id = "details__2";
+    div.appendChild(cardLogo);
+    div.appendChild(cardTitle);
 
-  cardLogo.innerText = "G";
-  cardTitle.innerHTML = `<strong>${title}</strong>`;
-  text.innerHTML = `${description}`;
-  h3.innerHTML = `${modality1[0]}`;
-  h3_2.innerHTML = `${modality2[1]}`;
+    div2.appendChild(text);
 
-  div.appendChild(cardLogo);
-  div.appendChild(cardTitle);
+    div3.appendChild(h3);
+    div3.appendChild(h3_2);
 
-  div2.appendChild(text);
+    li.append(div, div2, div3);
 
-  div3.appendChild(h3);
-  div3.appendChild(h3_2);
-
-  li.append(div, div2, div3);
-
-  return li;
+    return li;
 }
 
