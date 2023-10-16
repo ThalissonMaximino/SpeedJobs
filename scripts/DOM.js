@@ -78,18 +78,23 @@ const backEndJobs = [
 const frontEnd = document.getElementById("frontend__container");
 const backEnd = document.getElementById("backend__container");
 
-function cards(array, refer) {
-    for (let i = 0; i < array.length; i++) {
-      let jobs = array[i];
-      console.log(jobs);
-      let templateCards = createCards(jobs);
-      refer.appendChild(templateCards);
-    }
-  }
-  
-cards(frontEndJobs, frontEnd);
-  
-cards(backEndJobs, backEnd);
+
+  function createFrontSection(){
+    frontEndJobs.forEach((element) => {
+        frontEnd.appendChild(createCards(element));
+    })
+}
+function createBackSection(){
+    backEndJobs.forEach((element) => {
+        backEnd.appendChild(createCards(element));
+    })
+}
+ 
+
+createFrontSection();
+createBackSection();
+
+
 
 
 function createCards(database) {
